@@ -1,0 +1,34 @@
+FUNCTION  palandrome (ch:string ; i,j :INTEGER) : BOOLEAN
+VAR
+    
+BEGIN
+    IF (i>=j) THEN
+        RETURN(true)
+    ELSE IF (ch[i] = ch[j]) THEN
+        RETURN ( palandrome(ch, i + 1, j – 1))
+    END_IF
+
+
+END
+
+ALGORITHM algorithm_name
+VAR
+    ch :STRING;
+    RH : BOOLEAN ; 
+    i,j : INTEGER;
+BEGIN
+    read(ch);
+
+    i:=1;
+    j:=ch.length;
+    RH:=palandrome(ch ,i ,j)
+    IF (RH== true) THEN
+        write("palandrome");
+        
+        ELSE
+           write("non palandrome");
+        
+    END_IF
+   
+
+END
