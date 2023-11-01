@@ -4,11 +4,12 @@ VAR
 BEGIN
     IF (i>=j) THEN
         RETURN(true)
-    ELSE IF (ch[i] = ch[j]) THEN
+    ELSE IF (ch[i] == ch[j]) THEN
         RETURN ( palandrome(ch, i + 1, j – 1))
+    
+    else 
+      RETURN(false)
     END_IF
-
-
 END
 
 ALGORITHM algorithm_name
@@ -19,8 +20,8 @@ VAR
 BEGIN
     read(ch);
 
-    i:=1;
-    j:=ch.length;
+    i:=0;
+    j:=ch.length-1;
     RH:=palandrome(ch ,i ,j)
     IF (RH== true) THEN
         write("palandrome");
